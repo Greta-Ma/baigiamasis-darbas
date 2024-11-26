@@ -1,0 +1,221 @@
+:root {
+    --light-sand: hwb(37 93% 4%);
+    --medium-sand: hsl(35, 14%, 83%);
+    --dark-sand: rgb(188, 181, 173);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--light-sand);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #6b6767;
+}
+
+header {
+    background-color: var(--dark-sand);
+    color: #6b6767;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+}
+
+header .logo img {
+    max-height: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #6b6767;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color: #8e783150;
+    text-decoration: overline;
+}
+
+.contact-header {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--medium-sand);
+    color: #6b6767;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-details, .about-image, .contact-form {
+    flex: 1; /* Leidžia visiems elementams užimti tą patį plotį */
+    min-width: 250px; /* Užtikrina, kad elementai nesusitrauks iki labai mažo dydžio */
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    width: 45%; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #6b6767;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:active {
+    background-color: hsl(0, 89%, 47%);
+    transform: scale(0.95);
+}
+
+.map {
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%; /* Užtikrinama, kad žemėlapis užimtų visą plotį */
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+}
+
+footer {
+    background-color: var(--dark-sand);
+    color: #6b6767;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer .footer-logo img {
+    max-height: 60px;
+    margin-bottom: 0;
+}
+
+footer .footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .footer-nav ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+footer .footer-nav ul li a:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: #8e783150;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details, .contact-form, .about-image {
+        width: 90%; /* Užtikrinama, kad elementai tilptų mažesniuose ekranuose */
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .map iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+}

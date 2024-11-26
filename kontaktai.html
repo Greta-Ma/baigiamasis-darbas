@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontaktai</title>
+    <link rel="stylesheet" href="styles.kontaktai.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logoSkaidrus.png" alt="logo" />
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Pagrindinis</a></li>
+                    <li><a href="apie.html">Apie mus</a></li>
+                    <li><a href="kontaktai.html">Kontaktai</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-header">
+            <h1>Susisiekite su mumis</h1>
+        </section>
+        <section class="contact-info">
+            <div class="contact-details">
+                <h2>Mūsų adresas</h2>
+                <p>Audros g. 1, Klaipėda <br />Lietuva LT-92278</p>
+                <h2>Telefonas</h2>
+                <p>+370 123 45678</p>
+                <h2>El. paštas</h2>
+                <p>kontaktai@nsig.lt</p>
+            </div>
+
+            <div class="about-image">
+                <img src="images/EvoBg.png" alt="Evo plaukų priežiūros produktai">
+            </div>
+
+            <div class="contact-form">
+                <h2>Susisiekite</h2>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Vardas</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">El. paštas</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Žinutė</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Siųsti</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map">
+            <h2>Raskite mus čia:</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1865.8396094346456!2d21.1515883!3d55.7078118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e4f0198c7c14d7%3A0x82e07097c04a87f!2sAudros%20g.%201%2C%20Klaip%C4%97da%2C%20Lietuva!5e0!3m2!1sen!2slt!4v1690810360378!5m2!1sen!2slt"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="./logoSkaidrus.png" alt="logo" />
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><a href="apie.html">Apie mus</a></li>
+                <li><a href="kontaktai.html">Kontaktai</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Visos teisės saugomos.</p>
+    </footer>
+</body>
+
+</html>
